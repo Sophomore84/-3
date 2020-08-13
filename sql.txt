@@ -1,0 +1,5 @@
+select SUM(Convert(int,Weight)) FROM StockGoods  where LEFT(LocationName,1) ='1'
+select * into StockGoods from [CKGL].[dbo].[LocationRecord]
+select *
+FROM tb_KuWei
+order by KuWeiName asc 

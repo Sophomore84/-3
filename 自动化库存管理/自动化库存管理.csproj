@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF634F34-60B0-436A-A021-35EE3DB2F17F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>自动化库存管理</RootNamespace>
+    <AssemblyName>自动化库存管理</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>akqfq-9x2gn-001.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>57D6ED2BB9DBE40F601DB3A93452F5F7FB327F44</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>自动化库存管理_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HslCommunication">
+      <HintPath>..\..\阳江管子入库 7\入库\入库\bin\Debug\HslCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.Common">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\Maticsoft.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\CodematicDemo\CodematicDemo\Lib\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoSizeFormClass.cs" />
+    <Compile Include="BLL\LocationRecord.cs" />
+    <Compile Include="BLL\StockGoods.cs" />
+    <Compile Include="BLL\tb_DingDian.cs" />
+    <Compile Include="BLL\tb_KuCun.cs" />
+    <Compile Include="BLL\tb_KuCunRecords.cs" />
+    <Compile Include="BLL\tb_KuWei.cs" />
+    <Compile Include="BLL\tb_KuWeiDetail.cs" />
+    <Compile Include="BLL\tb_User.cs" />
+    <Compile Include="BLL\tb_UserLoginRecords.cs" />
+    <Compile Include="BLL\tb_WuPinDetail.cs" />
+    <Compile Include="ClassLibrary_Crane\BPQ_Error.cs" />
+    <Compile Include="ClassLibrary_Crane\Crane.cs" />
+    <Compile Include="ClassLibrary_Crane\PlcData.cs" />
+    <Compile Include="ClassLibrary_Crane\SiemensPLC.cs" />
+    <Compile Include="ClassLibrary_Crane\SiemensS7Net_New.cs" />
+    <Compile Include="Command\AsynchronousClient.cs" />
+    <Compile Include="Command\CRC.cs" />
+    <Compile Include="Command\NetCommand.cs" />
+    <Compile Include="Command\SynchronousSocketClient.cs" />
+    <Compile Include="DAL\LocationRecord.cs" />
+    <Compile Include="DAL\StockGoods.cs" />
+    <Compile Include="DAL\tb_DingDian.cs" />
+    <Compile Include="DAL\tb_KuCun.cs" />
+    <Compile Include="DAL\tb_KuCunRecords.cs" />
+    <Compile Include="DAL\tb_KuWei.cs" />
+    <Compile Include="DAL\tb_KuWeiDetail.cs" />
+    <Compile Include="DAL\tb_User.cs" />
+    <Compile Include="DAL\tb_UserLoginRecords.cs" />
+    <Compile Include="DAL\tb_WuPinDetail.cs" />
+    <Compile Include="DBUtility\CommandInfo.cs" />
+    <Compile Include="DBUtility\DbHelperMySQL.cs" />
+    <Compile Include="DBUtility\DbHelperOleDb.cs" />
+    <Compile Include="DBUtility\DbHelperOra.cs" />
+    <Compile Include="DBUtility\DbHelperSQL.cs" />
+    <Compile Include="DBUtility\DbHelperSQL2.cs" />
+    <Compile Include="DBUtility\DbHelperSQLite.cs" />
+    <Compile Include="DBUtility\DbHelperSQLP.cs" />
+    <Compile Include="DBUtility\DESEncrypt.cs" />
+    <Compile Include="DBUtility\OracleHelper.cs" />
+    <Compile Include="DBUtility\PubConstant.cs" />
+    <Compile Include="DBUtility\SQLHelper.cs" />
+    <Compile Include="DetailOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailOperationForm.Designer.cs">
+      <DependentUpon>DetailOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailOperationRuKuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailOperationRuKuForm.Designer.cs">
+      <DependentUpon>DetailOperationRuKuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExForm.Designer.cs">
+      <DependentUpon>ExForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KuWeiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KuWeiForm.Designer.cs">
+      <DependentUpon>KuWeiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAccountForm.Designer.cs">
+      <DependentUpon>ManageAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Assignment.cs" />
+    <Compile Include="Model\LocationRecord.cs" />
+    <Compile Include="Model\StockGoods.cs" />
+    <Compile Include="Model\tb_DingDian.cs" />
+    <Compile Include="Model\tb_KuCun.cs" />
+    <Compile Include="Model\tb_KuCunRecords.cs" />
+    <Compile Include="Model\tb_KuWei.cs" />
+    <Compile Include="Model\tb_KuWeiDetail.cs" />
+    <Compile Include="Model\tb_User.cs" />
+    <Compile Include="Model\tb_UserLoginRecords.cs" />
+    <Compile Include="Model\tb_WuPinDetail.cs" />
+    <Compile Include="RenGongGuanLi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenGongGuanLi.Designer.cs">
+      <DependentUpon>RenGongGuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RuChuKuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RuChuKuForm.Designer.cs">
+      <DependentUpon>RuChuKuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialPortHum\SerialSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortHum\SerialSet.Designer.cs">
+      <DependentUpon>SerialSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheBeiCanShu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SheBeiCanShu.Designer.cs">
+      <DependentUpon>SheBeiCanShu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheZhiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SheZhiForm.Designer.cs">
+      <DependentUpon>SheZhiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command\HostComputerCommand.cs" />
+    <EmbeddedResource Include="DetailOperationForm.resx">
+      <DependentUpon>DetailOperationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailOperationRuKuForm.resx">
+      <DependentUpon>DetailOperationRuKuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExForm.resx">
+      <DependentUpon>ExForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KuWeiForm.resx">
+      <DependentUpon>KuWeiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAccountForm.resx">
+      <DependentUpon>ManageAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenGongGuanLi.resx">
+      <DependentUpon>RenGongGuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RuChuKuForm.resx">
+      <DependentUpon>RuChuKuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerialPortHum\SerialSet.resx">
+      <DependentUpon>SerialSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SheBeiCanShu.resx">
+      <DependentUpon>SheBeiCanShu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SheZhiForm.resx">
+      <DependentUpon>SheZhiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="akqfq-9x2gn-001.ico" />
+    <Content Include="自动.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
